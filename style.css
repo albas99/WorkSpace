@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+:root{
+    --main-color: #ACC8E5;
+    --text-color: #000000;
+    --main-font-family: Arial Rounded MT Bold;
+    
+}
+
+body{
+    background: var(--main-color);
+}
+
+#logo{
+    width: 10rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.menu-toggle{
+    font-size: 2rem;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#navbar{
+    width: 100%;
+    overflow-x: visible;
+    height: 100%;
+    z-index: 1;
+    background: rgba(139, 167, 192, 0.7);
+    position: fixed;
+    transition: 0.5s fadeIn;
+    display: none;
+}
+
+#nav-list{
+    width: 80%;
+    margin: 10rem auto;
+    text-align: center;
+}
+
+.nav-link{
+    padding: 3rem 0;
+    font-size: 3rem;
+    font-family: var(--main-font-family);
+    display: block;
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.hero-section{
+    width: 90%;
+    height: 100vh;
+}
+
+.hero-text{
+    display: block;
+    width: 80%;
+    height: 40%;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.hero-text h1{
+    font-family: var(--main-font-family);
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    line-height: 3rem;
+}
+
+.hero-img{
+    width: 90%;
+    height: 40%;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+
+.hero-img img{
+    width: 100%;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.33));
+}
+
+.cta{
+    display: block;
+    width: 60%;
+    height: 5rem;
+    margin-top: -5rem;
+    margin-left: 3rem;
+}
+
+#email{
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: 2px black solid;
+    border-radius: .5rem;
+    font-family: var(--main-font-family);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#cta-btn{
+    width: 80%;
+    height: 1.6rem;
+    margin-left: 1.3rem;
+    border: solid 2px black;
+    border-radius: 2rem;
+    background: var(--main-color);
+}
+
+
+
+/* start of phone styles */
+@media screen and (min-width: 479px) {
+    #header{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar{
+        width: 100%;
+        display: flex;
+        background: none;
+        height: 10%;
+        margin-top: 0;
+
+    }
+
+    #nav-list{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+        margin-right: 2rem;
+    }
+
+    .nav-link{
+        font-size: 1.6rem;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .hero-section{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+
+    .hero-text{
+        width: 90%;
+        height: 90%;
+        margin-top: 4rem;
+    }
+    .hero-text h1{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-img{
+        width: 90%;
+        height: 90%;
+        margin-top: 4rem;
+    }
+    .hero-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .cta{
+        width: 60%;
+        height: 6rem;
+        margin-top: -12rem;
+    }
+
+    #email{
+        width: 100%;
+        height: 3rem;
+    }
+
+    #cta-btn{
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* start of large tablet styles */
+@media screen and (min-width: 991px) {
+    .hero-text{
+        width: 70%;
+        height: 90%;
+        margin-left: 2rem;
+    }
+
+    .hero-text h1{
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .cta{
+        margin-top: -5rem;
+    }
+}
+
